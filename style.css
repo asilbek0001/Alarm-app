@@ -1,3 +1,7 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
 .body{
     display: inline-flex;
     flex-direction: column;
@@ -47,4 +51,93 @@
     background-color: blue;
     border: none;
     border-radius: 20px;
+}
+
+/* Asosiy body va container */
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: whitesmoke;
+}
+
+#div1{
+    text-align: center;
+    width: 300px;
+    padding: 20px;
+    border-radius: 17px;
+    background-color: white;
+}
+
+/* Inputlar */
+.inp1, .inp2{
+    text-align: center;
+    width: 50px;
+    height: 43px;
+    border-radius: 5px;
+    border: 1px solid rgb(104, 99, 99);
+    margin: 5px;
+}
+
+.inp1::placeholder,
+.inp2::placeholder {
+    color: black;
+}
+
+/* Tugma */
+.btn1{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 115px;
+    height: 40px;
+    margin-top: 10px;
+    color: white;
+    background-color: blue;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* JS orqali yaratiladigan alarm div */
+.alarm-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: red;
+    color: white;
+    padding: 8px 12px;
+    margin-top: 8px;
+    border-radius: 6px;
+}
+
+/* Media query: kichik ekranlar uchun */
+@media (max-width: 576px) {
+    #div1 {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .inp1, .inp2 {
+        width: 40px;
+        height: 30px;
+    }
+
+    .btn1 {
+        width: 80px;
+        height: 35px;
+    }
+
+    .alarm-div {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 14px;
+    }
+
+    .alarm-div div span {
+        margin: 5px 0 0 0;
+    }
 }
